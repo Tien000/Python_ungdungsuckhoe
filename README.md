@@ -9,7 +9,8 @@
 -Tạo các bảng để lưu trữ thông tin về dữ liệu sức khỏe như dữ liệu về cân nặng, nhịp tim, áp suất máu 
 # 2.API Python fastapi
 -Cài đặt FastAPI và SQLAlchemy (ORM để tương tác với MSSQL)<br>
--Tạo một file fastapi.py và cấu hình FastAPI với SQLAlchemy
+-Tạo một file fastapi.py và cấu hình FastAPI với SQLAlchemy<br>
+nguon API: https://rapidapi.com/Healthgraphic/api/healthgraphic
 # 3.Nodered call API và lưu dữ liệu vào db
 -Cài đặt Node-RED và các node cần thiết (node-red-contrib-http-request để gọi API)<br>
 -Tạo một flow trong Node-RED để gọi API FastAPI và xử lý dữ liệu<br>
