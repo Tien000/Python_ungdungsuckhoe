@@ -6,7 +6,7 @@
   Tên project : Ungdung_suckhoe
 # 1.Xây dựng cơ sở dữ liệu
 -Sử dụng SQL Server Management Studio<br>
--Tạo các bảng để lưu trữ thông tin về dữ liệu sức khỏe như dữ liệu về cân nặng, nhịp tim, áp suất máu 
+-Tạo các bảng để lưu trữ thông tin về dữ liệu sức khỏe như dữ liệu về covid-19
 # 2.API Python fastapi
 -Cài đặt FastAPI và SQLAlchemy (ORM để tương tác với MSSQL)<br>
 -Tạo một file fastapi.py và cấu hình FastAPI với SQLAlchemy<br>
