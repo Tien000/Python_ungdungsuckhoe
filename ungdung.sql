@@ -1,7 +1,26 @@
-CREATE TABLE covid_data (
-    date DATE PRIMARY KEY,
-    cases INT,
-    deaths INT
+CREATE PROCEDURE [dbo].[InsertCovidData]
+AS
+BEGIN
+    -- Chèn dữ liệu từ bảng covid_data vào bảng CovidRates (tên mới của bảng)
+    INSERT INTO CovidRates (base_currency, target_currency, exchange_rate, updated_time)
+    SELECT 
+        'COVID-19' AS base_currency, 
+        'cases' AS target_currency, 
+        CAST(cases AS FLOAT) AS exchange_rate, 
+        CONVERT(DATETIME, date) AS updated_time
+    FROM 
+        covid_data;
+
+    INSERT INTO CovidRates (base_currency, target_currency, exchange_rate, updated_time)
+    SELECT 
+        'COVID-19' AS base_currency, 
+        'deaths' AS target_currency, 
+        CAST(deaths AS FLOAT) AS exchange_rate, 
+        CONVERT(DATETIME, date) AS updated_time
+    FROM 
+        covid_data;
+END;
+
 );
 
 INSERT INTO covid_data (date, cases, deaths)
