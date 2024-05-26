@@ -1,0 +1,43 @@
+[
+    {
+        "id": "http_in_1",
+        "type": "http in",
+        "z": "flow_1",
+        "name": "HTTP In",
+        "url": "/getcoviddata",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 180,
+        "wires": [["http_request_1"]]
+    },
+    {
+        "id": "http_request_1",
+        "type": "http request",
+        "z": "flow_1",
+        "name": "Call COVID-19 API",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://disease.sh/v3/covid-19/historical/USA?lastdays=30",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 320,
+        "y": 180,
+        "wires": [["http_response_1"]]
+    },
+    {
+        "id": "http_response_1",
+        "type": "http response",
+        "z": "flow_1",
+        "name": "HTTP Response",
+        "statusCode": "",
+        "headers": {},
+        "x": 540,
+        "y": 180,
+        "wires": []
+    }
+]
